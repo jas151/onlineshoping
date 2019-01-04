@@ -9,11 +9,11 @@
 <body>
   <%@include file="./shared/navigation.jsp" %>
     
-    <div class="container">
-   <p> this is about us page</p> 
+    <div class="container" id="minimum-height">
+   		<p> this is about us page</p> 
     
     </div>
   
-   <%@include file="./shared/footer.jsp" %>
+  
 </body>
 </html>

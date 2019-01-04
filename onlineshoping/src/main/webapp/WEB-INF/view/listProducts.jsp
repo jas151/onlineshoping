@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="minimum-height">
 
 	<div class="row">
 

@@ -1,5 +1,5 @@
-<div class="container">
 
+<div class="container">
       <div class="row">
 
         <div class="col-lg-3">
@@ -8,7 +8,7 @@
          
           </div>
 
-        </div>
+        
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
@@ -143,8 +143,6 @@
 
         </div>
         <!-- /.col-lg-9 -->
-
-      </div>
-      <!-- /.row -->
-
-    </div>
+</div><!-- end of row -->
+      </div><!-- end of container -->
+   

@@ -63,6 +63,18 @@
 	<script src="${js}/bootstrap.bundle.min.js"></script>
 	<script src="${js}/myapp.js"></script>
 
+
+
+<script>
+var checkvalue = window.location.pathname;
+alert(checkvalue); 
+$("#menu li a").each(function () {
+   if ($(this).attr('href') == checkvalue) {
+       $(this).addClass("active");
+   }
+});
+
+</script>
 </body>
 
 </html>
