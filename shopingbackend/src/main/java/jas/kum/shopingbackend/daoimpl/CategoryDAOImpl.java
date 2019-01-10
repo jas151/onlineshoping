@@ -3,18 +3,25 @@ package jas.kum.shopingbackend.daoimpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import jas.kum.shopingbackend.dao.CategoryDAO;
 import jas.kum.shopingbackend.dto.Category;
 
 @Repository("categoryDAO")
+@Transactional
 public class CategoryDAOImpl implements CategoryDAO {
+	
+	@Autowired
+	private SessionFactory sessionFactory;
 
 	private static 	List<Category> categories=new ArrayList<>();
 	
 	//static block to define a list of categories
-	static{
+	/*static{
 		      //adding first category
 		      Category category=new Category();
 		      category.setId(1);
@@ -25,20 +32,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 		
 		        //adding second category
 				Category category2=new Category();
-				category2.setId(1);
+				category2.setId(2);
 				category2.setName("Mobile");
-				category2.setDescripton("this is description for television");
-				category2.setImageURL("CAT_1.png");
+				category2.setDescripton("this is description for mobile");
+				category2.setImageURL("CAT_2.png");
 				categories.add(category2);
 				
 				//adding third category
 				Category category3=new Category();
-				category3.setId(1);
+				category3.setId(3);
 				category3.setName("Laptop");
-				category3.setDescripton("this is description for television");
-				category3.setImageURL("CAT_1.png");
+				category3.setDescripton("this is description for laptop");
+				category3.setImageURL("CAT_3.png");
 				categories.add(category3);
-	}
+	}*/
 	@Override
 	public List<Category> list() {
 		
@@ -54,6 +61,28 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		
 		return null;
+	}
+	@Override
+	@Transactional
+	public boolean add(Category category) {
+		
+		try {
+			//add the category to the database table
+			sessionFactory.getCurrentSession().persist(category);
+			return true;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+		
+	}
+	@Override
+	public boolean update(Category category) {
+		return false;
+	}
+	@Override
+	public boolean delete(Category category) {
+		return false;
 	}
 
 }

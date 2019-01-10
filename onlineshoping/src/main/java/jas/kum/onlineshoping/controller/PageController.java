@@ -1,4 +1,4 @@
-package jas.kum.onlineshoping.controller;
+ package jas.kum.onlineshoping.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,7 +47,7 @@ public class PageController {
 
 	@RequestMapping(value = { "/viewList" })
 	public ModelAndView viewList() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("page");   
 		mv.addObject("title", "View List");
 		mv.addObject("userClickViewList", true);
 		return mv;
@@ -76,6 +76,8 @@ public class PageController {
 		category = categoryDAO.get(id);
 
 		mv.addObject("title", category.getName());
+		
+		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
 		
 		// passing the single category object

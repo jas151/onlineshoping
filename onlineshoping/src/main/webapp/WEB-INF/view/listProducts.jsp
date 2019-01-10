@@ -10,6 +10,7 @@
 
 		<!-- to display the actulal product  -->
 		<div class="col-md-9">
+		
 			<!--added breadcrumb component  -->
 			<div class="row">
 				<div class="col-lg-12">

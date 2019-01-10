@@ -19,8 +19,7 @@
 
 <title>online shopping - ${title}</title>
 <script>
- window.menu= '${title}';
-
+	window.menu = '${title}';
 </script>
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
@@ -35,21 +34,22 @@
 	<!-- Navigation -->
 	<!-- adding navigation code -->
 	<%@include file="./shared/navigation.jsp"%>
+
 	<!-- Page Content -->
 	<!--add page content  -->
 	<c:if test="${userClickHome == true}">
 		<%@include file="home.jsp"%>
 	</c:if>
-	
+
 	<c:if test="${userClickAbout == true}">
 		<%@include file="about.jsp"%>
 	</c:if>
 	<c:if test="${userClickContact == true}">
 		<%@include file="contact.jsp"%>
 	</c:if>
-	
+
 	<!--load when user clickAllProduct or clickCategoryProduct  -->
-   <c:if test="${userClickAllProduct == true}">
+	<c:if test="${userClickAllProduct == true}">
 		<%@include file="listProducts.jsp"%>
 	</c:if>
 	<!-- /.container -->
@@ -65,16 +65,15 @@
 
 
 
-<script>
-var checkvalue = window.location.pathname;
-alert(checkvalue); 
-$("#menu li a").each(function () {
-   if ($(this).attr('href') == checkvalue) {
-       $(this).addClass("active");
-   }
-});
-
-</script>
+	<script>
+		var checkvalue = window.location.pathname;
+		alert(checkvalue);
+		$("#menu li a").each(function() {
+			if ($(this).attr('href') == checkvalue) {
+				$(this).addClass("active");
+			}
+		});
+	</script>
 </body>
 
 </html>

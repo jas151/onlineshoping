@@ -12,6 +12,7 @@
 		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
+	
 	<!-- adding jars in pom.xml file by using dependencies tag -->
 	<dependencies>
         <!--Linking shopingbackend project to frontend project  -->
@@ -28,12 +29,14 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<!--spring framework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
 		<!-- jsp jstl -->
 		<dependency>
 			<groupId>jstl</groupId>
