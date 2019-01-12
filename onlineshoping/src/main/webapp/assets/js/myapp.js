@@ -21,7 +21,10 @@ $(function(){
 		break;
 	
 	default:
+		if(menu=="Home") break;
 		$('#home').addClass('active');
+		$('listProducts').addClass('active');
+	
 		break;
 	}
 	

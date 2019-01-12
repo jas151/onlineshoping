@@ -48,8 +48,10 @@
 		<%@include file="contact.jsp"%>
 	</c:if>
 
+
+	
 	<!--load when user clickAllProduct or clickCategoryProduct  -->
-	<c:if test="${userClickAllProduct == true}">
+   <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 		<%@include file="listProducts.jsp"%>
 	</c:if>
 	<!-- /.container -->
@@ -67,7 +69,7 @@
 
 	<script>
 		var checkvalue = window.location.pathname;
-		alert(checkvalue);
+		//alert(checkvalue);
 		$("#menu li a").each(function() {
 			if ($(this).attr('href') == checkvalue) {
 				$(this).addClass("active");
