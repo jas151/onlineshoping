@@ -5,8 +5,13 @@
  */
 
 
+.dataTableImg{
+	height: 100px;
+	width: 100px;
+}
+
 #minimum-height{
-	min-height:650px;
+	min-height:500px;
 }
 
 
