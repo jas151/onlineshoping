@@ -1,4 +1,4 @@
-package jas.kum.shopingbackend.daoimpl;
+ package jas.kum.shopingbackend.daoimpl;
 
 import java.util.ArrayList;
 import java.util.List;

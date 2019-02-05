@@ -1,4 +1,4 @@
-package jas.kum.shopingbackend.config;
+ package jas.kum.shopingbackend.config;
 
 
 import java.util.Properties;

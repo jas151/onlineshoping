@@ -1,4 +1,4 @@
-package jas.kum.shopingbackend.test;
+ package jas.kum.shopingbackend.test;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

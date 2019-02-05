@@ -11,8 +11,8 @@
 		http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
-<context:component-scan base-package="jas.kum.onlineshoping.controller"></context:component-scan>
-<context:component-scan base-package="jas.kum.shopingbackend.daoimpl"></context:component-scan>
+<context:component-scan base-package="jas.kum.onlineshoping"></context:component-scan>
+<context:component-scan base-package="jas.kum.shopingbackend"></context:component-scan>
 <context:component-scan base-package="jas.kum.shopingbackend.config"></context:component-scan>
 
 

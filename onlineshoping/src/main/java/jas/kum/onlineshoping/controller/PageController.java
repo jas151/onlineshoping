@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import jas.kum.onlineshoping.exception.ProductNotFoundException;
 import jas.kum.shopingbackend.dao.CategoryDAO;
 import jas.kum.shopingbackend.dao.ProductDAO;
 import jas.kum.shopingbackend.dto.Category;
@@ -42,6 +43,7 @@ public class PageController {
 		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
 		mv.addObject("userClickHome", true);
+		logger.info("Inside PageController index method-INFO Ended ");
 		return mv;
 	}
 
@@ -105,10 +107,12 @@ public class PageController {
 	//viewing a single product
 	
 	@RequestMapping(value= "/show/{id}/product")
-	public ModelAndView showSingleProduct(@PathVariable int id){
+	public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException{
 		
 		ModelAndView mv = new ModelAndView("page");
 		Product product=productDAO.get(id);
+		
+		if(product==null)throw new ProductNotFoundException("");
 		
 		//update the view count
 		product.setViews(product.getViews() +1);
